@@ -31,9 +31,7 @@ const Quiz = ({ title, showProgress, showPoints, navigation, summary }) => {
         <Title title={title} />
       </header>
       <main className="main-container">
-        {(questions === undefined ||
-          questions?.length === 0 ||
-          questions === null) && (
+        {(questions === undefined || questions?.length === 0 || questions === null) && (
           <h2 style={{ color: "red", marginBottom: "1rem" }}>
             Pass Questions array to Quiz component
           </h2>
@@ -41,9 +39,7 @@ const Quiz = ({ title, showProgress, showPoints, navigation, summary }) => {
         {questions && status === "fetched" && (
           <div className="startExam-container">
             <p>Welcome to THE REACT QUIZ</p>
-            <Button onClick={() => dispatch({ type: "started" })}>
-              START QUIZ
-            </Button>
+            <Button onClick={() => dispatch({ type: "started" })}>START QUIZ</Button>
           </div>
         )}
         {questions && (status === "started" || status === "review") && (
@@ -56,8 +52,7 @@ const Quiz = ({ title, showProgress, showPoints, navigation, summary }) => {
                 {showPoints && (
                   <Points>
                     <p>
-                      Question &nbsp;: &nbsp;{currentQuestion + 1}/
-                      {numOfQuestions}{" "}
+                      Question &nbsp;: &nbsp;{currentQuestion + 1}/{numOfQuestions}{" "}
                     </p>
                     <p>
                       {review ? points + " / " : ""} {totalPoints} &nbsp;Points
@@ -76,9 +71,7 @@ const Quiz = ({ title, showProgress, showPoints, navigation, summary }) => {
                 Prev
               </Button>
               {currentQuestion < numOfQuestions - 1 ? (
-                <Button onClick={() => dispatch({ type: "nextQuestion" })}>
-                  Next
-                </Button>
+                <Button onClick={() => dispatch({ type: "nextQuestion" })}>Next</Button>
               ) : (
                 <Button onClick={() => dispatch({ type: "finished" })}>
                   {review ? "Back to Results" : "Finish"}
@@ -88,14 +81,12 @@ const Quiz = ({ title, showProgress, showPoints, navigation, summary }) => {
           </QuestionsBox>
         )}
 
-        {questions &&
-          navigation &&
-          (status === "started" || status === "review") && (
-            <Navigation>
-              <NavigateQuestions />
-              <Timer time={11 * 30} onTimerExpire={dispatch} />
-            </Navigation>
-          )}
+        {questions && navigation && (status === "started" || status === "review") && (
+          <Navigation>
+            <NavigateQuestions />
+            <Timer time={11 * 30} onTimerExpire={dispatch} />
+          </Navigation>
+        )}
 
         {status === "finished" && (
           <Summary
@@ -104,12 +95,8 @@ const Quiz = ({ title, showProgress, showPoints, navigation, summary }) => {
             points={points}
             totalPoints={totalPoints}
           >
-            <Button onClick={() => dispatch({ type: "started" })}>
-              RESTART QUIZ
-            </Button>
-            <Button onClick={() => dispatch({ type: "review" })}>
-              REVIEW ANSWERS
-            </Button>
+            <Button onClick={() => dispatch({ type: "started" })}>RESTART QUIZ</Button>
+            <Button onClick={() => dispatch({ type: "review" })}>REVIEW ANSWERS</Button>
           </Summary>
         )}
       </main>

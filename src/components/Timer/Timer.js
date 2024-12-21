@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./timer.css";
 
 const Timer = ({ time, onTimerExpire }) => {
@@ -8,19 +8,17 @@ const Timer = ({ time, onTimerExpire }) => {
   const hours = Math.floor(timeLeft / (60 * 60));
   const minutes = Math.floor(timeLeft / 60) - Math.floor(hours * 60 * 60);
   const seconds =
-    Math.floor(timeLeft) -
-    Math.floor(hours * 60 * 60) -
-    Math.floor(minutes * 60);
+    Math.floor(timeLeft) - Math.floor(hours * 60 * 60) - Math.floor(minutes * 60);
 
   useEffect(() => {
-    if(timeLeft <= 0) {
-      onTimerExpire({type:"finished"})
+    if (timeLeft <= 0) {
+      onTimerExpire({ type: "finished" });
       return;
     }
-      const intervalId = setInterval(() => {
-        setDate(new Date().toLocaleTimeString());
-        setTimeLeft((timeLeft) => timeLeft - 1);
-      }, 1000);
+    const intervalId = setInterval(() => {
+      setDate(new Date().toLocaleTimeString());
+      setTimeLeft((timeLeft) => timeLeft - 1);
+    }, 1000);
     return () => {
       clearInterval(intervalId);
     };
@@ -38,4 +36,4 @@ const Timer = ({ time, onTimerExpire }) => {
   );
 };
 
-export default React.memo(Timer) ;
+export default React.memo(Timer);
