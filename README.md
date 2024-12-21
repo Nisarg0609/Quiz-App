@@ -2,6 +2,9 @@
 
 A dynamic and flexible quiz application built with React, featuring reusable components for various question types, timer functionality, progress tracking, and answer review.
 
+## Live Demo
+You can view the live demo of this project here: [Live Demo]() 
+
 ## 📝 **Key Features**
 - **Reusable Quiz Component:** Supports multiple question types, including multiple-choice, true/false, and input-based questions.
 - **Customizable Settings:** Configure points per question, total score, and enable/disable the progress bar.
