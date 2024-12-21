@@ -1,0 +1,15 @@
+.btn{
+    padding: 0.7rem 1.5rem;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    cursor: pointer;
+    background-color: rgba(255, 55, 248, 0.749);
+    color: white;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+}
+.btn:hover{
+    scale: 1.1;
+}

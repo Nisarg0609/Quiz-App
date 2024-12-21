@@ -1,0 +1,14 @@
+.summaryText{
+    font-size: 22px;
+    margin: 3rem 0;
+}
+.summaryBtn{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.scoreText{
+    font-size: 20px;
+    margin-bottom: 3rem;
+}

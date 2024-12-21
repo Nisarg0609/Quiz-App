@@ -1,0 +1,68 @@
+.app{
+    padding: 0.5rem;
+    background-color: rgb(242, 105, 245);
+}
+
+@media (max-width:1024px){
+    .question-progress{
+        margin-bottom: 3rem;
+    }
+    .questionText{
+        margin-bottom: 2rem;
+    }
+    .button-container{
+        margin-top: 3rem ;
+    }
+    .main-container{
+        flex-direction: column;
+    }
+}
+@media (max-width:700px){
+    .progress-container progress{
+        width: 95%;
+    }
+    .progress-container{
+        margin-bottom: 1rem;
+    }
+    .points-container{
+        width: 95%;
+    }
+}
+@media (max-width:600px) {
+    .input-container{
+        flex-direction: column;
+    }
+    .inputLabel{
+        margin-right: 0;
+    }
+    .input{
+        margin-top: 2rem;
+    }
+    .inputDiv{
+        margin-top: 0;
+    }
+}
+@media (max-width:500px) {
+    .optionListItem{
+        width: 95%;
+    }
+    .button-container{
+        width: 95%;
+    }
+    .questionText{
+        font-weight: 400;
+        line-height: 2rem;
+        word-spacing: 0.2rem;
+        font-size: 20px;
+    }
+}
+@media (max-width: 400px){
+    .input{
+        font-size: 14px;
+    }
+    .navigationItem{
+        margin: 0.5rem;
+        width: 30px;
+        height: 30px;
+    }
+}

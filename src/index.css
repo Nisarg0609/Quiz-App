@@ -1,0 +1,23 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: sans-serif;
+  color: white !important;
+}
+a{
+  text-decoration: none;
+}
+li{
+  list-style-type: none;
+}
+.transparentBox{
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+/* .option{} */
+/* .btn{} */

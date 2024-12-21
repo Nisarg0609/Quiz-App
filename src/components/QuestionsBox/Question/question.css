@@ -1,0 +1,21 @@
+.question-container{
+    flex:8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.questionText{
+    font-size: 24px;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+.optionList{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.inputDiv{
+    margin-top: 3rem;
+}

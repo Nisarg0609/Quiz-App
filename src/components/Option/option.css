@@ -1,0 +1,41 @@
+.optionListItem{
+    width: 60%;
+    padding: 1rem;
+    margin: 0.8rem 0;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: 0.1s ease;
+    color: white;
+    font-size: 16px;
+    letter-spacing: 1px;
+    position: relative;
+}
+.optionListItem:hover{
+    scale: 1.05;
+    transition: 0.1s ease;
+}
+.selected{
+    background-color: rgb(222, 42, 162);
+}
+.not-selected{
+    background-color: rgb(66, 184, 207);
+}
+.not-selected:hover{
+    background-color: rgb(66, 71, 207);
+}
+.disabled {
+    pointer-events: none !important;
+}
+.right{
+    background-color: green !important;
+}
+.wrong{
+    background-color: red !important;
+}
+.RightTick{
+    position:absolute;
+    left: 10%;
+    top: 4%;
+    color: green;
+    font-size: 30px;
+}
